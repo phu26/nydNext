@@ -57,21 +57,7 @@ const handleScroll = (scrollAmount) => {
       useEffect(() => {
   
         }, [activeNav])
-window.onload=function(){
 
-    let next = document.querySelector('.next')
-    let prev = document.querySelector('.prev')
-    let sli = document.querySelector('.slide')
- 
-   
-    next.addEventListener('click', nextClick)
-        
-    
-    
-    prev.addEventListener('click',prevClick)
-
-  
-}
 const  showSlide = () => {
     let items = document.querySelectorAll('.item')
 
