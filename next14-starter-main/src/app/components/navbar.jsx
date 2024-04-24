@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import imagelogo from '../../assets/images/logo_3.png'
 import bottomenu from '../../assets/images/thumbl.jpg'
 import { SlMagnifier,SlHandbag,SlArrowDown } from "react-icons/sl";
-import '../../assets/js/active.js'
+
 import Image from 'next/image'
 import NavLink from './navLink';
 

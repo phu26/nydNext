@@ -13,7 +13,7 @@ import pic7 from '../assets/images/guong.jpg'
 import pic8 from '../assets/images/ke-go.jpg'
 import bottomenu from '../assets/images/thumbl.jpg'
 import { SlMagnifier,SlHandbag,SlArrowDown } from "react-icons/sl";
-import '../assets/js/active.js'
+
 import Image from 'next/image'
 import './contact.css'
 import Link from 'next/link';
