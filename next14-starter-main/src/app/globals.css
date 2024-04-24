@@ -61,6 +61,7 @@ body {
 
 body {
   overflow-y : scroll!important;
+  overflow-x : hidden!important;
   line-height: 1.4;
   font-size: 12px;
   font-style: normal;
@@ -312,7 +313,7 @@ select {
 }
 @media only screen and (max-width: 767px) {
   .section-space {
-    margin-bottom: 70px !important;
+    margin-bottom: 100px !important;
   }
 }
 .section-space--half {
@@ -8303,7 +8304,7 @@ select {
 }
 @media only screen and (max-width: 767px) {
   .section-space {
-    margin-bottom: 70px !important;
+    margin-bottom: 300px !important;
   }
 }
 .section-space--half {

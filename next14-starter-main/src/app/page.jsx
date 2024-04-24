@@ -9,14 +9,23 @@ import pic3 from '../assets/images/pic3.jpg'
 import pic4 from '../assets/images/pic4.jpg'
 import pic5 from '../assets/images/pic5.jpg'
 import pic6 from '../assets/images/pic6.jpg'
+import pic7 from '../assets/images/guong.jpg'
+import pic8 from '../assets/images/ke-go.jpg'
 import bottomenu from '../assets/images/thumbl.jpg'
 import { SlMagnifier,SlHandbag,SlArrowDown } from "react-icons/sl";
 import '../assets/js/active.js'
 import Image from 'next/image'
 import './contact.css'
+import Link from 'next/link';
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [url, setUrl] = useState("");
+  const [time, setTime] = useState(0);
   const containerRef = useRef();
+  const guong = [
+    {id:1,title:"Gương tròn treo tường viền gỗ"},
+    {id:2,title:""},
+  ]
   const category = [
     {id:"product-series-1",title:"Decoration",tab:"product-tab-1"},
     {id:"product-series-4",title:"Lighting" ,tab:"product-tab-2"},
@@ -29,7 +38,7 @@ const handleScroll = (scrollAmount) => {
   // Calculate the new scroll position
   
   const newScrollPosition = scrollPosition + scrollAmount;
-  console.log(newScrollPosition);
+
   // Update the state with the new scroll position
   setScrollPosition(newScrollPosition);
 
@@ -37,10 +46,17 @@ const handleScroll = (scrollAmount) => {
   containerRef.current.scrollLeft = newScrollPosition;
 };
     useEffect(() => {
+      var t = Math.random();
+      const timeoutId = setTimeout(() => {
+        setTime(t);
+        showSlide();
+      }, 5000);
+   return () => clearTimeout(timeoutId);  
+      }, [time])
 
-
-      showSlide();
-      }, [])
+      useEffect(() => {
+  
+        }, [activeNav])
 window.onload=function(){
 
     let next = document.querySelector('.next')
@@ -80,6 +96,15 @@ const  nextClick = () => {
         let items = document.querySelectorAll('.item')
         document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
     }
+    const link = (id) => {
+      if(id == 1)
+      {
+        
+      }else
+      if(id==2){
+
+      }
+    }
 
   return (
     <div>
@@ -90,48 +115,60 @@ const  nextClick = () => {
            <div>
              <div class="container2">
                <div class="slide">
-                 <div class="item" style={{backgroundImage: `url(${pic1.src})`}}>
+               <Link class="item" style={{backgroundImage: `url(${pic1.src})`}}  href="https://shope.ee/qN2eyDJI2">
+             <div>
                    <div class="content">
                      <div class="name">Sofa hạt đậu</div>
                      <div class="des">Ghế sofa Nhu Y Decor được chế tác từ len lồng cừu mềm mịn, nhung, hay bọc da và khung gỗ tự nhiên cao cấp, hứa hẹn mang đến không gian ấm áp và sang trọng cho không gian của bạn.</div>
                      <button>See More</button>
                    </div>
-                 </div>
-                 <div class="item" style={{backgroundImage: `url(${pic2.src})`}}>
+                </div>
+                 </Link>
+                 <Link class="item" style={{backgroundImage: `url(${pic2.src})`}}  href="https://shope.ee/qN2eyDJI2" >
+                 <div  >
                    <div class="content">
                      <div class="name">Sofa lông cừu</div>
                      <div class="des">Ghế sofa Nhu Y Decor được chế tác từ len lồng cừu mềm mịn và khung gỗ tự nhiên cao cấp, hứa hẹn mang đến không gian ấm áp và sang trọng cho không gian của bạn.</div>
                      <button>See More</button>
                    </div>
                  </div>
-                 <div class="item" style={{backgroundImage: `url(${pic3.src})`}}>
+                 </Link>
+                 <Link class="item" style={{backgroundImage: `url(${pic3.src})`}}  href="https://shope.ee/qN2eyDJI2" >
+                 <div >
                    <div class="content">
                      <div class="name">Bàn hạt đậu</div>
                      <div class="des">Bàn trà tròn SoFa -  cafe phong cách hiện đại</div>
                      <button> See More</button>
                    </div>
                  </div>
-                 <div class="item" style={{backgroundImage: `url(${pic4.src})`}}>
+                 </Link>
+                 <Link class="item" style={{backgroundImage: `url(${pic4.src})`}}  href="https://shope.ee/qN2eyDJI2" >
+                 <div >
                    <div class="content">
                      <div class="name">Bàn tròn sofa</div>
                      <div class="des">Mặt bàn từ gỗ MDF phủ melamin cao cấp, chống xước và chống nước. Chân bàn là gỗ cao su vân gỗ đều và đẹp.</div>
                      <button>See More</button>
                    </div>
                  </div>
-                 <div class="item" style={{backgroundImage: `url(${pic5.src})`}}>
+                 </Link>
+                 <Link class="item" style={{backgroundImage: `url(${pic5.src})`}}  href="https://shope.ee/qN2eyDJI2" >
+                 <div >
                    <div class="content">
                      <div class="name">Gương tròn treo tường</div>
                      <div class="des">Không chỉ là vật dụng hữu ích trong việc trang điểm, sản phẩm còn mang tính trang trí cao, tôn thêm vẻ đẹp cho không gian của ngôi nhà.</div>
                      <button>See More</button>
                    </div>
                  </div>
-                 <div class="item" style={{backgroundImage: `url(${pic6.src})`}}>
+                 </Link>
+                 <Link class="item" style={{backgroundImage: `url(${pic6.src})`}}  href="https://shope.ee/qN2eyDJI2" >
+                 <div >
                    <div class="content">
                      <div class="name">Kệ gỗ decor</div>
                      <div class="des">Kệ gỗ trang trí phòng ngủ, phòng khách, nhà bếp</div>
                      <button>See More</button>
                    </div>
                  </div>
+                 </Link>
                </div>
                <div class="button">
                  <button class="prev">
@@ -166,7 +203,7 @@ const  nextClick = () => {
                    <div class="single-category-item single-category-item--style2">
                      <div class="single-category-item__image">
                        <a href="shop-left-sidebar.html">
-                         <Image width="600" height="350" src="" class="Image-fluid" alt="" />
+                         <Image width="600" height="350" src={pic3} class="Image-fluid" alt="" />
                        </a>
                      </div>
                      <div class="single-category-item__content single-category-item__content--style2">
@@ -181,7 +218,7 @@ const  nextClick = () => {
                    <div class="single-category-item single-category-item--style2">
                      <div class="single-category-item__image">
                        <a href="shop-left-sidebar.html">
-                         <Image width="600" height="350" src="" class="Image-fluid" alt="" />
+                         <Image width="600" height="350" src={pic2} class="Image-fluid" alt="" />
                        </a>
                      </div>
                      <div class="single-category-item__content single-category-item__content--style2">
@@ -196,7 +233,7 @@ const  nextClick = () => {
                    <div class="single-category-item single-category-item--style2">
                      <div class="single-category-item__image">
                        <a href="shop-left-sidebar.html">
-                         <Image width="600" height="350" src="" class="Image-fluid" alt="" />
+                         <Image width="600" height="350" src={pic4} class="Image-fluid" alt="" />
                        </a>
                      </div>
                      <div class="single-category-item__content single-category-item__content--style2">
@@ -245,7 +282,8 @@ const  nextClick = () => {
                               </div>
                               </div>
                               <div class="tab-content">
-                              <div class="tab-pane fade active show" id="product-series-1" role="tabpanel" aria-labelledby="product-tab-1">
+
+                              <div class={`tab-pane fade  ${activeNav === 0 ? 'active show`' : ''}`} id="product-series-1" role="tabpanel" aria-labelledby="product-tab-1">
                               <div class="single-row-slider-wrapper">
                               <div class="ht-slick-slider slick-initialized slick-slider" data-slick-setting="{
                                     &quot;slidesToShow&quot;: 4,
@@ -276,8 +314,85 @@ const  nextClick = () => {
                                       <div class="single-grid-product">
                                       <div class="single-grid-product__image">
                                       <a href="single-product.html" tabindex="0">
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
+                                                        <Image width="600" height="800" src={pic7} class="img-fluid" alt=""/>
+                                                        <Image width="600" height="800" src={pic7} class="img-fluid" alt=""/>
+                                                    </a>
+
+                                                    <div class="hover-icons">
+                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-bag"></i></a>
+                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-heart"></i></a>
+                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-android-options"></i></a>
+                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#quick-view-modal-container" tabindex="0"><i class="ion-android-open"></i></a>
+                                                    </div>
+                                        </div>  
+                                        <div class="single-grid-product__content">
+                                        <div class="single-grid-product__category-rating">
+                                        <span class="category"><a href="shop-left-sidebar.html" tabindex="0">Gương treo tường</a></span>
+                                        <span class="rating">
+                                                            <i class="ion-android-star active"></i>
+                                                            <i class="ion-android-star active"></i>
+                                                            <i class="ion-android-star active"></i>
+                                                            <i class="ion-android-star active"></i>
+                                                            <i class="ion-android-star active"></i>
+                                                        </span>
+                                          </div>
+                                          <h3 class="single-grid-product__title"> <a href="single-product.html" tabindex="0">Gương tròn viền gỗ</a></h3>
+                                                            <p class="single-grid-product__price"><span class="main-price">$120.00</span></p>
+
+                                          </div>
+
+
+
+                                        </div>
+
+                                        </div>
+                                        </div>
+                                      </div>
+
+
+
+                                    
+
+
+                                    </div>
+                                    </div>
+                                    <button class="slick-next slick-arrow"  aria-disabled="false" onClick={() => handleScroll(+200)}><i class="ion-chevron-right"></i></button>
+                                  </div>
+                                </div>
+                                </div>
+                                    <div class={`tab-pane fade  ${activeNav === 1 ? 'active show`' : ''}`} id="product-series-1" role="tabpanel" aria-labelledby="product-tab-1">
+                              <div class="single-row-slider-wrapper">
+                              <div class="ht-slick-slider slick-initialized slick-slider" data-slick-setting="{
+                                    &quot;slidesToShow&quot;: 4,
+                                    &quot;slidesToScroll&quot;: 1,
+                                    &quot;arrows&quot;: true,
+                                    &quot;autoplay&quot;: false,
+                                    &quot;autoplaySpeed&quot;: 5000,
+                                    &quot;speed&quot;: 1000,
+                                    &quot;infinite&quot;: false,
+                                    &quot;prevArrow&quot;: {&quot;buttonClass&quot;: &quot;slick-prev&quot;, &quot;iconClass&quot;: &quot;ion-chevron-left&quot; },
+                                    &quot;nextArrow&quot;: {&quot;buttonClass&quot;: &quot;slick-next&quot;, &quot;iconClass&quot;: &quot;ion-chevron-right&quot; }
+                                }" data-slick-responsive="[
+                                    {&quot;breakpoint&quot;:1501, &quot;settings&quot;: {&quot;slidesToShow&quot;: 4} },
+                                    {&quot;breakpoint&quot;:1199, &quot;settings&quot;: {&quot;slidesToShow&quot;: 4, &quot;arrows&quot;: false} },
+                                    {&quot;breakpoint&quot;:991, &quot;settings&quot;: {&quot;slidesToShow&quot;: 3, &quot;arrows&quot;: false} },
+                                    {&quot;breakpoint&quot;:767, &quot;settings&quot;: {&quot;slidesToShow&quot;: 2, &quot;arrows&quot;: false} },
+                                    {&quot;breakpoint&quot;:575, &quot;settings&quot;: {&quot;slidesToShow&quot;: 2, &quot;arrows&quot;: false} },
+                                    {&quot;breakpoint&quot;:479, &quot;settings&quot;: {&quot;slidesToShow&quot;: 1, &quot;arrows&quot;: false} }
+                                ]">
+                                    <button class="slick-prev slick-arrow slick-disabled" aria-disabled="true" onClick={() => handleScroll(-200)} >
+                                    <i class="ion-chevron-left"></i>
+                                    </button>
+                                    <div class="slick-list draggable">
+                                    <div class="slick-track" ref={containerRef} style={{opacity: "1", width: "1425px", transform: "translate3d(0px, 0px, 0px)"}}>
+                                    <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style={{width: "255px"}}>
+                                      <div>
+                                      <div class="col" style={{width: "100%", display: "inline-block"}}>
+                                      <div class="single-grid-product">
+                                      <div class="single-grid-product__image">
+                                      <a href="single-product.html" tabindex="0">
+                                                        <Image width="600" height="800" src={pic8} class="img-fluid" alt=""/>
+                                                        <Image width="600" height="800" src={pic8} class="img-fluid" alt=""/>
                                                     </a>
 
                                                     <div class="hover-icons">
@@ -357,270 +472,7 @@ const  nextClick = () => {
                                       </div>
 
 
-                                      <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style={{width: "255px"}}>
-                                      <div>
-                                      <div class="col" style={{width: "100%", display: "inline-block"}}>
-                                      <div class="single-grid-product">
-                                      <div class="single-grid-product__image">
-                                      <a href="single-product.html" tabindex="0">
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                    </a>
-
-                                                    <div class="hover-icons">
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-bag"></i></a>
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-heart"></i></a>
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-android-options"></i></a>
-                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#quick-view-modal-container" tabindex="0"><i class="ion-android-open"></i></a>
-                                                    </div>
-                                        </div>  
-                                        <div class="single-grid-product__content">
-                                        <div class="single-grid-product__category-rating">
-                                        <span class="category"><a href="shop-left-sidebar.html" tabindex="0">Furniture</a></span>
-                                        <span class="rating">
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star-outline"></i>
-                                                        </span>
-                                          </div>
-                                          <h3 class="single-grid-product__title"> <a href="single-product.html" tabindex="0">Cillum dolore lorem ipsum
-                                                            decoration item</a></h3>
-                                                            <p class="single-grid-product__price"><span class="main-price">$120.00</span></p>
-
-                                          </div>
-
-
-
-                                        </div>
-                                        
-                                        </div>
-                                        </div>
-                                      </div>
-
-
-
-                                      <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style={{width: "255px"}}>
-                                      <div>
-                                      <div class="col" style={{width: "100%", display: "inline-block"}}>
-                                      <div class="single-grid-product">
-                                      <div class="single-grid-product__image">
-                                      <a href="single-product.html" tabindex="0">
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                    </a>
-
-                                                    <div class="hover-icons">
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-bag"></i></a>
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-heart"></i></a>
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-android-options"></i></a>
-                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#quick-view-modal-container" tabindex="0"><i class="ion-android-open"></i></a>
-                                                    </div>
-                                        </div>  
-                                        <div class="single-grid-product__content">
-                                        <div class="single-grid-product__category-rating">
-                                        <span class="category"><a href="shop-left-sidebar.html" tabindex="0">Furniture</a></span>
-                                        <span class="rating">
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star-outline"></i>
-                                                        </span>
-                                          </div>
-                                          <h3 class="single-grid-product__title"> <a href="single-product.html" tabindex="0">Cillum dolore lorem ipsum
-                                                            decoration item</a></h3>
-                                                            <p class="single-grid-product__price"><span class="main-price">$120.00</span></p>
-
-                                          </div>
-
-
-
-                                        </div>
-                                        
-                                        </div>
-                                        </div>
-                                      </div>
-
-
-
-                                      <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style={{width: "255px"}}>
-                                      <div>
-                                      <div class="col" style={{width: "100%", display: "inline-block"}}>
-                                      <div class="single-grid-product">
-                                      <div class="single-grid-product__image">
-                                      <a href="single-product.html" tabindex="0">
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                    </a>
-
-                                                    <div class="hover-icons">
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-bag"></i></a>
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-heart"></i></a>
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-android-options"></i></a>
-                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#quick-view-modal-container" tabindex="0"><i class="ion-android-open"></i></a>
-                                                    </div>
-                                        </div>  
-                                        <div class="single-grid-product__content">
-                                        <div class="single-grid-product__category-rating">
-                                        <span class="category"><a href="shop-left-sidebar.html" tabindex="0">Furniture</a></span>
-                                        <span class="rating">
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star-outline"></i>
-                                                        </span>
-                                          </div>
-                                          <h3 class="single-grid-product__title"> <a href="single-product.html" tabindex="0">Cillum dolore lorem ipsum
-                                                            decoration item</a></h3>
-                                                            <p class="single-grid-product__price"><span class="main-price">$120.00</span></p>
-
-                                          </div>
-
-
-
-                                        </div>
-                                        
-                                        </div>
-                                        </div>
-                                      </div>
-
-
-
-                                      <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style={{width: "255px"}}>
-                                      <div>
-                                      <div class="col" style={{width: "100%", display: "inline-block"}}>
-                                      <div class="single-grid-product">
-                                      <div class="single-grid-product__image">
-                                      <a href="single-product.html" tabindex="0">
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                    </a>
-
-                                                    <div class="hover-icons">
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-bag"></i></a>
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-heart"></i></a>
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-android-options"></i></a>
-                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#quick-view-modal-container" tabindex="0"><i class="ion-android-open"></i></a>
-                                                    </div>
-                                        </div>  
-                                        <div class="single-grid-product__content">
-                                        <div class="single-grid-product__category-rating">
-                                        <span class="category"><a href="shop-left-sidebar.html" tabindex="0">Furniture</a></span>
-                                        <span class="rating">
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star-outline"></i>
-                                                        </span>
-                                          </div>
-                                          <h3 class="single-grid-product__title"> <a href="single-product.html" tabindex="0">Cillum dolore lorem ipsum
-                                                            decoration item</a></h3>
-                                                            <p class="single-grid-product__price"><span class="main-price">$120.00</span></p>
-
-                                          </div>
-
-
-
-                                        </div>
-                                        
-                                        </div>
-                                        </div>
-                                      </div>
-
-
-
-
-
-                                      <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style={{width: "255px"}}>
-                                      <div>
-                                      <div class="col" style={{width: "100%", display: "inline-block"}}>
-                                      <div class="single-grid-product">
-                                      <div class="single-grid-product__image">
-                                      <a href="single-product.html" tabindex="0">
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                    </a>
-
-                                                    <div class="hover-icons">
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-bag"></i></a>
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-heart"></i></a>
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-android-options"></i></a>
-                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#quick-view-modal-container" tabindex="0"><i class="ion-android-open"></i></a>
-                                                    </div>
-                                        </div>  
-                                        <div class="single-grid-product__content">
-                                        <div class="single-grid-product__category-rating">
-                                        <span class="category"><a href="shop-left-sidebar.html" tabindex="0">Furniture</a></span>
-                                        <span class="rating">
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star-outline"></i>
-                                                        </span>
-                                          </div>
-                                          <h3 class="single-grid-product__title"> <a href="single-product.html" tabindex="0">Cillum dolore lorem ipsum
-                                                            decoration item</a></h3>
-                                                            <p class="single-grid-product__price"><span class="main-price">$120.00</span></p>
-
-                                          </div>
-
-
-
-                                        </div>
-                                        
-                                        </div>
-                                        </div>
-                                      </div>
-
-
-
-
-                                      <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style={{width: "255px"}}>
-                                      <div>
-                                      <div class="col" style={{width: "100%", display: "inline-block"}}>
-                                      <div class="single-grid-product">
-                                      <div class="single-grid-product__image">
-                                      <a href="single-product.html" tabindex="0">
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                        <Image width="600" height="800" src="" class="img-fluid" alt=""/>
-                                                    </a>
-
-                                                    <div class="hover-icons">
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-bag"></i></a>
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-heart"></i></a>
-                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-android-options"></i></a>
-                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#quick-view-modal-container" tabindex="0"><i class="ion-android-open"></i></a>
-                                                    </div>
-                                        </div>  
-                                        <div class="single-grid-product__content">
-                                        <div class="single-grid-product__category-rating">
-                                        <span class="category"><a href="shop-left-sidebar.html" tabindex="0">Furniture</a></span>
-                                        <span class="rating">
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star active"></i>
-                                                            <i class="ion-android-star-outline"></i>
-                                                        </span>
-                                          </div>
-                                          <h3 class="single-grid-product__title"> <a href="single-product.html" tabindex="0">Cillum dolore lorem ipsum
-                                                            decoration item</a></h3>
-                                                            <p class="single-grid-product__price"><span class="main-price">$120.00</span></p>
-
-                                          </div>
-
-
-
-                                        </div>
-                                        
-                                        </div>
-                                        </div>
-                                      </div>
+                                   
 
 
                                     </div>
