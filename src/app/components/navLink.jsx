@@ -7,7 +7,7 @@ const NavLink = ({link}) =>{
   const pathname =  usePathname()
     console.log(pathname) 
     return (
-        <Link className={`rounded p-1 ${pathname === link.url && "bg-black text-white"}`}  href={link.url}>{link.title}</Link>
+        <Link className={`rounded p-1 ${pathname === link.url && "text-red"}`}  href={link.url}>{link.title}</Link>
     )
 }
 

@@ -11,6 +11,9 @@ import pic5 from '../assets/images/pic5.jpg'
 import pic6 from '../assets/images/pic6.jpg'
 import pic7 from '../assets/images/guong.jpg'
 import pic8 from '../assets/images/ke-go.jpg'
+import dayda from '../assets/images/dd.png'
+import daythung from '../assets/images/dt.png'
+import viengo from '../assets/images/viengo.png'
 import bottomenu from '../assets/images/thumbl.jpg'
 import { SlMagnifier,SlHandbag,SlArrowDown } from "react-icons/sl";
 
@@ -28,10 +31,11 @@ const Home = () => {
     {id:2,title:""},
   ]
   const category = [
-    {id:"product-series-1",title:"Decoration",tab:"product-tab-1"},
-    {id:"product-series-4",title:"Lighting" ,tab:"product-tab-2"},
-    {id:"product-series-3",title:"Storage",tab:"product-tab-3" },
-    {id:"product-series-4",title:"Living Room",tab:"product-tab-4" },
+    {id:"product-series-1",title:"Gương Treo Tường",tab:"product-tab-1"},
+    {id:"product-series-4",title:"Bàn Sofa" ,tab:"product-tab-2"},
+    {id:"product-series-3",title:"Kệ decor",tab:"product-tab-3" },
+    {id:"product-series-4",title:"Ghế",tab:"product-tab-4" },
+    {id:"product-series-5",title:"Phụ kiện",tab:"product-tab-5" },
 ]
 const [activeTab,setActiveTab] =  useState(category[0].tab);
 const activeNav = category.findIndex(e => e.tab === activeTab)
@@ -301,8 +305,8 @@ const  nextClick = () => {
                                       <div class="single-grid-product">
                                       <div class="single-grid-product__image">
                                       <a href="single-product.html" tabindex="0">
-                                                        <Image width="600" height="800" src={pic7} class="img-fluid" alt=""/>
-                                                        <Image width="600" height="800" src={pic7} class="img-fluid" alt=""/>
+                                                        <Image width="600" height="800" src={viengo} class="img-fluid" alt=""/>
+                                                        <Image width="600" height="800" src={viengo} class="img-fluid" alt=""/>
                                                     </a>
 
                                                     <div class="hover-icons">
@@ -314,7 +318,7 @@ const  nextClick = () => {
                                         </div>  
                                         <div class="single-grid-product__content">
                                         <div class="single-grid-product__category-rating">
-                                        <span class="category"><a href="shop-left-sidebar.html" tabindex="0">Gương treo tường</a></span>
+                                        <span class="category"><a href="shop-left-sidebar.html" tabindex="0">Gương tròn</a></span>
                                         <span class="rating">
                                                             <i class="ion-android-star active"></i>
                                                             <i class="ion-android-star active"></i>
@@ -323,8 +327,96 @@ const  nextClick = () => {
                                                             <i class="ion-android-star active"></i>
                                                         </span>
                                           </div>
-                                          <h3 class="single-grid-product__title"> <a href="single-product.html" tabindex="0">Gương tròn viền gỗ</a></h3>
-                                                            <p class="single-grid-product__price"><span class="main-price">$120.00</span></p>
+                                          <h3 class="single-grid-product__title"> <a href="single-product.html" tabindex="0">Gương tròn viền gỗ decor</a></h3>
+                                                            <p class="single-grid-product__price"><span class="main-price">25.000 đ</span></p>
+
+                                          </div>
+
+
+
+                                        </div>
+
+                                        </div>
+                                        </div>
+                                      </div>
+
+
+
+
+                                      <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style={{width: "255px"}}>
+                                      <div>
+                                      <div class="col" style={{width: "100%", display: "inline-block"}}>
+                                      <div class="single-grid-product">
+                                      <div class="single-grid-product__image">
+                                      <a href="single-product.html" tabindex="0">
+                                                        <Image width="600" height="800" src={dayda} class="img-fluid" alt=""/>
+                                                        <Image width="600" height="800" src={dayda} class="img-fluid" alt=""/>
+                                                    </a>
+
+                                                    <div class="hover-icons">
+                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-bag"></i></a>
+                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-heart"></i></a>
+                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-android-options"></i></a>
+                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#quick-view-modal-container" tabindex="0"><i class="ion-android-open"></i></a>
+                                                    </div>
+                                        </div>  
+                                        <div class="single-grid-product__content">
+                                        <div class="single-grid-product__category-rating">
+                                        <span class="category"><a href="shop-left-sidebar.html" tabindex="0">Gương tròn</a></span>
+                                        <span class="rating">
+                                                            <i class="ion-android-star active"></i>
+                                                            <i class="ion-android-star active"></i>
+                                                            <i class="ion-android-star active"></i>
+                                                            <i class="ion-android-star active"></i>
+                                                            <i class="ion-android-star active"></i>
+                                                        </span>
+                                          </div>
+                                          <h3 class="single-grid-product__title"> <a href="single-product.html" tabindex="0">Gương tròn viền dây da</a></h3>
+                                                            <p class="single-grid-product__price"><span class="main-price">85.000 đ</span></p>
+
+                                          </div>
+
+
+
+                                        </div>
+
+                                        </div>
+                                        </div>
+                                      </div>
+
+
+
+
+                                      <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style={{width: "255px"}}>
+                                      <div>
+                                      <div class="col" style={{width: "100%", display: "inline-block"}}>
+                                      <div class="single-grid-product">
+                                      <div class="single-grid-product__image">
+                                      <a href="single-product.html" tabindex="0">
+                                                        <Image width="600" height="800" src={daythung} class="img-fluid" alt=""/>
+                                                        <Image width="600" height="800" src={daythung} class="img-fluid" alt=""/>
+                                                    </a>
+
+                                                    <div class="hover-icons">
+                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-bag"></i></a>
+                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-heart"></i></a>
+                                                        <a href="javascript:void(0)" tabindex="0"><i class="ion-android-options"></i></a>
+                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#quick-view-modal-container" tabindex="0"><i class="ion-android-open"></i></a>
+                                                    </div>
+                                        </div>  
+                                        <div class="single-grid-product__content">
+                                        <div class="single-grid-product__category-rating">
+                                        <span class="category"><a href="shop-left-sidebar.html" tabindex="0">Gương tròn</a></span>
+                                        <span class="rating">
+                                                            <i class="ion-android-star active"></i>
+                                                            <i class="ion-android-star active"></i>
+                                                            <i class="ion-android-star active"></i>
+                                                            <i class="ion-android-star active"></i>
+                                                            <i class="ion-android-star active"></i>
+                                                        </span>
+                                          </div>
+                                          <h3 class="single-grid-product__title"> <a href="single-product.html" tabindex="0">Gương tròn viền dây thừng</a></h3>
+                                                            <p class="single-grid-product__price"><span class="main-price">269.000 đ</span></p>
 
                                           </div>
 

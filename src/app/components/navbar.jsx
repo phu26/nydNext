@@ -81,7 +81,7 @@ const NavbarPage = () =>{
                                     <div class="header-cart-icon">
                                         <a href="#" id="minicart-trigger">
                                            <SlHandbag/>
-                                            <span class="counter">3</span>
+                                         
                                         </a>
                                    
                                         <div class="mini-cart" id="mini-cart">
@@ -333,7 +333,7 @@ const NavbarPage = () =>{
                                                 <div class="header-cart-icon">
                                                     <a href="cart.html">
                                                         <i class="ion-bag"></i>
-                                                        <span class="counter">3</span>
+                                                      
                                                     </a>
                                                 </div>
                                             </li>
