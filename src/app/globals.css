@@ -1707,12 +1707,12 @@ select {
 }
 @media only screen and (max-width: 767px) {
   .footer-copyright-wrapper--default-footer .footer-logo {
-    margin-bottom: 15px;
+   
   }
 }
 @media only screen and (max-width: 767px) {
   .footer-copyright-wrapper--default-footer .copyright-text {
-    margin-bottom: 15px;
+   
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -8303,8 +8303,11 @@ select {
   }
 }
 @media only screen and (max-width: 767px) {
-  .section-space {
+  .section-space1 {
     margin-bottom: 300px !important;
+  }
+  .section-space2 {
+    margin-bottom: 70 !important;
   }
 }
 .section-space--half {
@@ -9619,12 +9622,12 @@ select {
 }
 @media only screen and (max-width: 767px) {
   .footer-copyright-wrapper--default-footer .footer-logo {
-    margin-bottom: 15px;
+    margin-bottom: 0;
   }
 }
 @media only screen and (max-width: 767px) {
   .footer-copyright-wrapper--default-footer .copyright-text {
-    margin-bottom: 15px;
+    margin-bottom: 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {

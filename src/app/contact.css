@@ -21,6 +21,9 @@
   }
   @media only screen and (min-width: 768px) and (max-width: 1500px),
   only screen and (max-width: 767px) {
+    .footerlogoa{
+      height: 130px;
+    }
     .container2{
       position: absolute;
       top: 90%;

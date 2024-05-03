@@ -95,7 +95,7 @@ const  nextClick = () => {
 
   return (
     <div>
-   <div class="hero-slider-area section-space">
+   <div class="hero-slider-area section-space1">
      <div class="hero-slider-wrapper">
        <div class="ht-slick-slider slick-initialized slick-slider slick-dotted">
          <div class="slick-list draggable">

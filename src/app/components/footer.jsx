@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { FaFacebookF,FaTiktok } from "react-icons/fa";
 import { SiShopee } from "react-icons/si";
+import logo from "../../assets/images/logoneee.png"
 const FooterPage = () =>{
  
     return (
@@ -16,8 +17,8 @@ const FooterPage = () =>{
                     <div class="row align-items-center no-gutters">
                       <div class="col-lg-2 col-md-2">
                         <div class="footer-logo">
-                          <a href="#">
-                            <Image width="93" height="25" src="" class="img-fluid" alt=""/>
+                          <a className="footerlogoa" href="#">
+                            <Image width="186"  src={logo} class="img-fluid" alt=""/>
                           </a>
                         </div>
                       </div>
