@@ -21,6 +21,7 @@ const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [url, setUrl] = useState("");
   const [time, setTime] = useState(0);
+  const [open, setOpen] = useState(false);
   const containerRef = useRef();
   const guong = [
     {id:1,title:"Gương tròn treo tường viền gỗ"},
@@ -189,7 +190,7 @@ const  nextClick = () => {
                    <div class="single-category-item single-category-item--style2">
                      <div class="single-category-item__image">
                        <a href="shop-left-sidebar.html">
-                         <Image width="600" height="350" src={pic3} class="Image-fluid" alt="" />
+                         <Image width="600" height="350" src={pic3} class="img-fluid" alt="" />
                        </a>
                      </div>
                      <div class="single-category-item__content single-category-item__content--style2">
@@ -204,7 +205,7 @@ const  nextClick = () => {
                    <div class="single-category-item single-category-item--style2">
                      <div class="single-category-item__image">
                        <a href="shop-left-sidebar.html">
-                         <Image width="600" height="350" src={pic2} class="Image-fluid" alt="" />
+                         <Image width="600" height="350" src={pic2} class="img-fluid" alt="" />
                        </a>
                      </div>
                      <div class="single-category-item__content single-category-item__content--style2">
@@ -219,7 +220,7 @@ const  nextClick = () => {
                    <div class="single-category-item single-category-item--style2">
                      <div class="single-category-item__image">
                        <a href="shop-left-sidebar.html">
-                         <Image width="600" height="350" src={pic4} class="Image-fluid" alt="" />
+                         <Image width="600" height="350" src={pic4} class="img-fluid" alt="" />
                        </a>
                      </div>
                      <div class="single-category-item__content single-category-item__content--style2">
@@ -476,7 +477,9 @@ const  nextClick = () => {
               
               </div>
                </div>
+               
  </div>
+ 
   )
   
 

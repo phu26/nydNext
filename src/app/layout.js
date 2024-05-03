@@ -4,6 +4,7 @@ import './vendor.css'
 import './animate.js'
 import Script from 'next/script'
 import NavbarPage from './components/navbar'
+import FooterPage from './components/footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className='h-24'> <NavbarPage/> </div>
         <div className='h-24'> {children} </div>
-    
+        <div className='h-24'> <FooterPage/> </div>
         </body>
     
     </html>
