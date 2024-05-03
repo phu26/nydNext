@@ -111,7 +111,7 @@ const  nextClick = () => {
                    </div>
                 </div>
                  </Link>
-                 <Link class="item" style={{backgroundImage: `url(${pic2.src})`}}  href="https://shope.ee/qN2eyDJI2" >
+                 <Link class="item" style={{backgroundImage: `url(${pic2.src})`}}  href="https://shope.ee/8KTHXhvHDb" >
                  <div  >
                    <div class="content">
                      <div class="name">Sofa lông cừu</div>
@@ -120,7 +120,7 @@ const  nextClick = () => {
                    </div>
                  </div>
                  </Link>
-                 <Link class="item" style={{backgroundImage: `url(${pic3.src})`}}  href="https://shope.ee/qN2eyDJI2" >
+                 <Link class="item" style={{backgroundImage: `url(${pic3.src})`}}  href="https://shope.ee/2VVUb7j3Ac" >
                  <div >
                    <div class="content">
                      <div class="name">Bàn hạt đậu</div>
@@ -129,7 +129,7 @@ const  nextClick = () => {
                    </div>
                  </div>
                  </Link>
-                 <Link class="item" style={{backgroundImage: `url(${pic4.src})`}}  href="https://shope.ee/qN2eyDJI2" >
+                 <Link class="item" style={{backgroundImage: `url(${pic4.src})`}}  href="https://shope.ee/1qFnnvxymW" >
                  <div >
                    <div class="content">
                      <div class="name">Bàn tròn sofa</div>
@@ -138,7 +138,7 @@ const  nextClick = () => {
                    </div>
                  </div>
                  </Link>
-                 <Link class="item" style={{backgroundImage: `url(${pic5.src})`}}  href="https://shope.ee/qN2eyDJI2" >
+                 <Link class="item" style={{backgroundImage: `url(${pic5.src})`}}  href="https://shope.ee/7fDakgNplm" >
                  <div >
                    <div class="content">
                      <div class="name">Gương tròn treo tường</div>
@@ -147,7 +147,7 @@ const  nextClick = () => {
                    </div>
                  </div>
                  </Link>
-                 <Link class="item" style={{backgroundImage: `url(${pic6.src})`}}  href="https://shope.ee/qN2eyDJI2" >
+                 <Link class="item" style={{backgroundImage: `url(${pic6.src})`}}  href="https://shope.ee/8f67wYfDZX" >
                  <div >
                    <div class="content">
                      <div class="name">Kệ gỗ decor</div>
