@@ -8,7 +8,7 @@ import FooterPage from './components/footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Next App',
+  title: 'Nhu Y Decor',
   description: 'Next.js starter app',
 }
 
