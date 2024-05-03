@@ -29,18 +29,18 @@ const FooterPage = () =>{
                         <div class="copyright-social-wrapper">
                           <ul class="copyright-social">
                             <li>
-                              <a href="#">
+                              <a href="https://www.facebook.com/nhuydecorofficial">
                              
                                 <FaFacebookF />
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="https://www.tiktok.com/@nhu.y.decor">
                            <FaTiktok/>
                               </a>
                             </li>
                             <li>
-                              <a href="#">
+                              <a href="https://shope.ee/8UmhjqcgPb">
                               
                                 <SiShopee/>
                               </a>
