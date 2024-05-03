@@ -1,6 +1,6 @@
 "use client"; 
 import { FaBeer } from "react-icons/fa";
-import { useState, useEffect } from 'react'
+import { useState, useEffect,useRef } from 'react'
 import imagelogo from '../../assets/images/logo_3.png'
 import bottomenu from '../../assets/images/thumbl.jpg'
 import { SlMagnifier,SlHandbag,SlArrowDown } from "react-icons/sl";
@@ -11,23 +11,43 @@ import NavLink from './navLink';
 
 const NavbarPage = () =>{
     const links = [
-        {url:"/",title:"HOME", sub:[
-            {url:"/homesub1",title:"Homesub1"},
-            {url:"/homesub1",title:"Homesub1"}
+        {url:"/",title:"HOME",isvisible:false, sub:[
+            {url:"/homesub1",title:"Homesub1",isvisible:false},
+            {url:"/homesub1",title:"Homesub1",isvisible:false}
         ] },
-        {url:"/about",title:"ABOUT" },
-        {url:"/contact",title:"CONTACT" },
-        {url:"/products",title:"PRODUCTS" },
+        {url:"/about",title:"ABOUT",isvisible:false },
+        {url:"/contact",title:"CONTACT" ,isvisible:false},
+        {url:"/products",title:"PRODUCTS",isvisible:false },
     ]
 
 
      ;
+   
+     const [activeNav,setActiveNav] = useState(null);
+     const headerRef = useRef(null)
+     const menuLeft = useRef(null)
      const [open,setOpen] = useState(false);
-
-     
+     const [menu,setMenu] = useState(
+       links
+     );
+   
+     const menuToggle = () => menuLeft.current.classList.toggle('active')
      const clickOpen =() =>{
         setOpen(!open);
     }
+    const linkk = (id) => {
+        console.log("front",menu[id].isvisible)
+        if( menu[id].isvisible === true)
+{
+    links[id].isvisible = false;
+}else{
+    links[id].isvisible = true;
+}
+        
+        console.log("after",links[id].isvisible)
+        setMenu(links);
+    
+      }
     return (
         <div class="header-area header-area--transparent header-area--multi-row header-sticky">
         <div class="container">
@@ -336,7 +356,7 @@ const NavbarPage = () =>{
         <div 
                className={`offcanvas-mobile-menu ${open === true ? 'active' : 'inactive'} `}
        
-           
+             
                id="offcanvas-mobile-menu">
   <a onClick={clickOpen} class="offcanvas-menu-close" id="offcanvas-menu-close-trigger">
     <i class="ion-android-close"></i>
@@ -353,223 +373,45 @@ const NavbarPage = () =>{
       </div>
       <nav class="offcanvas-navigation">
         <ul>
-          <li class="menu-item-has-children">
-            <span class="menu-expand">
+        {menu.map((link,index)=>(
+          <li 
+       
+          key={index}
+        
+            className={`menu-item-has-children ${link.isvisible === true ? 'active' : ''}`}
+            onClick={() => linkk(index)}
+      
+          >
+            <span style={link.sub ? {display:"block"}:{display:"none"} }  class="menu-expand">  
               <i></i>
             </span>
-            <a href="#">Home</a>
-            <ul class="sub-menu" style={{display: "none"}}>
-              <li>
-                <a href="index.html">Home 01</a>
-              </li>
-              <li>
-                <a href="index-2.html">Home 02</a>
-              </li>
-              <li>
-                <a href="index-3.html">Home 03</a>
-              </li>
-              <li>
-                <a href="index-4.html">Home 04</a>
-              </li>
-              <li>
-                <a href="index-5.html">Home 05</a>
-              </li>
-              <li>
-                <a href="index-6.html">Home 06</a>
-              </li>
-              <li>
-                <a href="index-7.html">Home 07</a>
-              </li>
-              <li>
-                <a href="index-8.html">Home 08</a>
-              </li>
-            </ul>
+            <NavLink link={link} key=  {link.title}>
+
+                                            </NavLink>
+                     
+            <ul style={link.isvisible ? {display:"block"}:{display:"none"} } class="sub-menu">
+                                                {link.sub?.map((sub)=>(
+                                                        <li><a href="index.html">{sub.title} </a></li>
+                                                )
+
+                                                )}
+                                          
+                                                </ul>                       
+                                         
+
+                                       
+                                     
+                                    
+                                         
+                               
+ 
+
+          
           </li>
-          <li class="menu-item-has-children">
-            <span class="menu-expand">
-              <i></i>
-            </span>
-            <a href="#">Pages</a>
-            <ul class="sub-menu" style={{display: "none"}}>
-              <li class="menu-item-has-children">
-                <span class="menu-expand">
-                  <i></i>
-                </span>
-                <a href="#">Page List One</a>
-                <ul class="sub-menu" style={{display: "none"}}>
-                  <li>
-                    <a href="cart.html">Cart</a>
-                  </li>
-                  <li>
-                    <a href="checkout.html">Checkout</a>
-                  </li>
-                  <li>
-                    <a href="wishlist.html">Wishlist</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children">
-                <span class="menu-expand">
-                  <i></i>
-                </span>
-                <a href="#">Page List Two</a>
-                <ul class="sub-menu" style={{display: "none"}}>
-                  <li>
-                    <a href="my-account.html">My Account</a>
-                  </li>
-                  <li>
-                    <a href="login-register.html">Login Register</a>
-                  </li>
-                  <li>
-                    <a href="faq.html">FAQ</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children">
-                <span class="menu-expand">
-                  <i></i>
-                </span>
-                <a href="#">Page List Three</a>
-                <ul class="sub-menu" style={{display: "none"}}>
-                  <li>
-                    <a href="compare.html">Compare</a>
-                  </li>
-                  <li>
-                    <a href="contact.html">Contact</a>
-                  </li>
-                  <li>
-                    <a href="about.html">About Us</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children">
-            <span class="menu-expand">
-              <i></i>
-            </span>
-            <a href="#">Shop</a>
-            <ul class="sub-menu" style={{display: "none"}}>
-              <li class="menu-item-has-children">
-                <span class="menu-expand">
-                  <i></i>
-                </span>
-                <a href="#">Shop Grid</a>
-                <ul class="sub-menu" style={{display: "none"}}>
-                  <li>
-                    <a href="shop-3-column.html">shop 3 column</a>
-                  </li>
-                  <li>
-                    <a href="shop-4-column.html">shop 4 column</a>
-                  </li>
-                  <li>
-                    <a href="shop-left-sidebar.html">shop left sidebar</a>
-                  </li>
-                  <li>
-                    <a href="shop-right-sidebar.html">shop right sidebar</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children">
-                <span class="menu-expand">
-                  <i></i>
-                </span>
-                <a href="#">Shop List</a>
-                <ul class="sub-menu" style={{display: "none"}}>
-                  <li>
-                    <a href="shop-list.html">shop List</a>
-                  </li>
-                  <li>
-                    <a href="shop-list-left-sidebar.html">shop List Left Sidebar</a>
-                  </li>
-                  <li>
-                    <a href="shop-list-right-sidebar.html">shop List Right Sidebar</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children">
-                <span class="menu-expand">
-                  <i></i>
-                </span>
-                <a href="#">Single Product One</a>
-                <ul class="sub-menu" style={{display: "none"}}>
-                  <li>
-                    <a href="single-product.html">Single Product</a>
-                  </li>
-                  <li>
-                    <a href="single-product-variable.html">Single Product variable</a>
-                  </li>
-                  <li>
-                    <a href="single-product-affiliate.html">Single Product affiliate</a>
-                  </li>
-                  <li>
-                    <a href="single-product-group.html">Single Product group</a>
-                  </li>
-                  <li>
-                    <a href="single-product-tabstyle-2.html">Tab Style 2</a>
-                  </li>
-                  <li>
-                    <a href="single-product-tabstyle-3.html">Tab Style 3</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children">
-                <span class="menu-expand">
-                  <i></i>
-                </span>
-                <a href="#">Single Product Two</a>
-                <ul class="sub-menu" style={{display: "none"}}>
-                  <li>
-                    <a href="single-product-gallery-left.html">Gallery Left</a>
-                  </li>
-                  <li>
-                    <a href="single-product-gallery-right.html">Gallery Right</a>
-                  </li>
-                  <li>
-                    <a href="single-product-sticky-left.html">Sticky Left</a>
-                  </li>
-                  <li>
-                    <a href="single-product-sticky-right.html">Sticky Right</a>
-                  </li>
-                  <li>
-                    <a href="single-product-slider-box.html">Slider Box</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="menu-item-has-children">
-            <span class="menu-expand">
-              <i></i>
-            </span>
-            <a href="#">Blog</a>
-            <ul class="sub-menu" style={{display: "none"}}>
-              <li>
-                <a href="blog-left-sidebar.html">Blog Left Sidebar</a>
-              </li>
-              <li>
-                <a href="blog-right-sidebar.html">Blog Right Sidebar</a>
-              </li>
-              <li>
-                <a href="blog-post-left-sidebar.html">Blog Post Left Sidebar</a>
-              </li>
-              <li>
-                <a href="blog-post-right-sidebar.html">Blog Post Right Sidebar</a>
-              </li>
-              <li>
-                <a href="blog-post-image-format.html">Blog Post Image Format</a>
-              </li>
-              <li>
-                <a href="blog-post-image-gallery.html">Blog Post Image Gallery</a>
-              </li>
-              <li>
-                <a href="blog-post-audio-format.html">Blog Post Audio Format</a>
-              </li>
-              <li>
-                <a href="blog-post-video-format.html">Blog Post Video Format</a>
-              </li>
-            </ul>
-          </li>
+               ))}
+         
+          
+          
         </ul>
       </nav>
       <div class="offcanvas-settings">
