@@ -33,21 +33,21 @@
     
   }
   .slide .item:nth-child(3){
-    left: 50%;
+    left: 0!important;
     visibility : hidden;
   }
   .slide .item:nth-child(4){
-    left: calc(50% + 220px);
+    left:0!important;
     visibility : hidden;
   }
   .slide .item:nth-child(5){
-    left: calc(50% + 440px);
+    left:0!important;
     visibility : hidden;
   }
   
   /* here n = 0, 1, 2, 3,... */
   .slide .item:nth-child(n + 6){
-    left: calc(50% + 660px);
+    left: 0!important;
     opacity: 0;
     visibility : hidden;
   }
