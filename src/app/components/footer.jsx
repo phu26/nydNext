@@ -29,7 +29,7 @@ const FooterPage = () =>{
                         <div class="copyright-social-wrapper">
                           <ul class="copyright-social">
                             <li>
-                              <a href="https://www.facebook.com/nhuydecorofficial">
+                              <a href="https://www.facebook.com/share/g1vokgLegURC19SF/?mibextid=WC7FNe">
                              
                                 <FaFacebookF />
                               </a>
